@@ -47,5 +47,8 @@ async def cocktail(ctx):
 async def woman(ctx):
     await ctx.send("Meet me in my office.")
 
+@bot.command(pass_context=True)
+async def kosovo(ctx):
+    await ctx.send("Bomb the Serbs!")
 
 bot.run(DISCORD_KEY)
