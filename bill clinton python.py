@@ -51,4 +51,8 @@ async def woman(ctx):
 async def kosovo(ctx):
     await ctx.send("Bomb the Serbs!")
 
+@bot.command(pass_context=True)
+async def foster(ctx):
+    await ctx.send("It's such a shame he committed suicide.")
+
 bot.run(DISCORD_KEY)
