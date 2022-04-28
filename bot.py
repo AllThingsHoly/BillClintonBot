@@ -12,5 +12,9 @@ async def on_ready():
     print("Ready")
     
 @bot.command(pass_context=True)
-async def hello(ctx):
-    await ctx.send("hello!")
+async def monica(ctx):
+    await ctx.send("I deeeed nawwt have seckshuuuual relaytions with that wouhman.")
+
+
+
+bot.run(DISCORD_KEY)
