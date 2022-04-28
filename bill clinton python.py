@@ -54,5 +54,10 @@ async def kosovo(ctx):
 @bot.command(pass_context=True)
 async def foster(ctx):
     await ctx.send("It's such a shame he committed suicide.")
+    
+@bot.command(pass_context=True)
+async def kms(ctx):
+    await ctx.send("I could do that for you.")
+
 
 bot.run(DISCORD_KEY)
