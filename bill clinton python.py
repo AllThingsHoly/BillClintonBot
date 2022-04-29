@@ -35,9 +35,6 @@ async def Esptein(ctx):
 async def among(ctx):
     await ctx.send("SUS.")
 
-@bot.command(pass_context=True)
-async def black(ctx):
-    await ctx.send("Do you mean Superpredators.")
 
 @bot.command(pass_context=True)
 async def cocktail(ctx):
