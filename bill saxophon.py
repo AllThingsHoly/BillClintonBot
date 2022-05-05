@@ -10,7 +10,7 @@ from discord.ext import commands
 # Suppress noise about console usage from errors
 youtube_dl.utils.bug_reports_message = lambda: ''
 
-
+'''formatting for customization of bot'''
 ytdl_format_options = {
     'format': 'bestaudio/best',
     'outtmpl': '%(extractor)s-%(id)s-%(title)s.%(ext)s',
@@ -28,10 +28,10 @@ ytdl_format_options = {
 ffmpeg_options = {
     'options': '-vn',
 }
-
+'''necessary import'''
 ytdl = youtube_dl.YoutubeDL(ytdl_format_options)
 
-
+'''fetches data from video url that user sent in channel'''
 class YTDLSource(discord.PCMVolumeTransformer):
     def __init__(self, source, *, data, volume=0.5):
         super().__init__(source, volume)
@@ -53,7 +53,7 @@ class YTDLSource(discord.PCMVolumeTransformer):
         filename = data['url'] if stream else ytdl.prepare_filename(data)
         return cls(discord.FFmpegPCMAudio(filename, **ffmpeg_options), data=data)
 
-
+'''commands to summon and use bot'''
 class Music(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
@@ -135,7 +135,7 @@ bot = commands.Bot(
     intents=intents,
 )
 
-
+'''logs onto the bot'''
 @bot.event
 async def on_ready():
     print(f'Logged in as {bot.user} (ID: {bot.user.id})')
